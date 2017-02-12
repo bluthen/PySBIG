@@ -1,0 +1,8 @@
+COPYING
+PySBIG.py
+PySBIGuncompressmodule.c
+README
+cPySBIG.py
+ctest.py
+setup.py
+test.py

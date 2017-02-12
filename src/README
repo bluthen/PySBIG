@@ -1,0 +1,55 @@
+-------------
+PySBIG module
+-------------
+
+This module can read SBIG files and give you a numpy array for 
+the data and a dictionary for the headers.
+
+For the latest version goto: http://coldstonelabs.org
+
+----------
+Installing
+----------
+This module require numpy to be installed you can get numpy 
+at: http://numpy.scipy.org
+
+To install the module untar the package goto the directory and 
+run:
+
+python setup.py install
+
+-------------
+Example Usage
+-------------
+
+import PySBIG
+
+sbig = PySBIG.PySBIG("mysbigfile.st9")
+
+data = sbig.getData();  #two dimentional array
+headers = sbig.getHeaders(); #dictionary
+
+-------
+NOTE: Now there is a module that uses a C function to uncompress each line,
+it is around 40 times faster. To use it substitude PySBIG with cPySBIG.
+-------
+
+import cPySBIG
+sbig = cPySBIG.cPySBIG("mysbigfile.st9")
+
+data = sbig.getData();  #two dimentional array
+headers = sbig.getHeaders(); #dictionary
+
+----
+Todo
+----
+
+o Have less same code in both cPySBIG and PySBIG.
+
+o Write/save SBIG files.
+
+-------
+Authors
+-------
+
+Russell Valentine (russ@coldstonelabs.org)
